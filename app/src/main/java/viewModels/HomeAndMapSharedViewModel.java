@@ -24,13 +24,15 @@ public class HomeAndMapSharedViewModel extends ViewModel {
     }
 
     public void setMapOpened(View view) {
-
+        boolean curMapOpened;
         if (view.getId() == R.id.btn_start) {
-            mMapOpened.setValue(true);
-        //    homeFragment.fragmentTransaction.replace(R.id.frgmCont, homeFragment);
+            curMapOpened = true;
+            //    homeFragment.fragmentTransaction.replace(R.id.frgmCont, homeFragment);
         } else {
-            mMapOpened.setValue(false);
+            curMapOpened = false;
         }
+        if (curMapOpened != getMapOpened().getValue())
+            mMapOpened.setValue(curMapOpened);
     }
 
     public MutableLiveData<Boolean> getMapOpened() {

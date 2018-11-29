@@ -73,12 +73,6 @@ public class MainActivity extends AppCompatActivity {
         btnSettings = findViewById(R.id.btn_settings);
         btnInfo = findViewById(R.id.btn_info);
         homeFragment = new HomeFragment();
-//        historyFragment = new HistoryFragment();
-//        profileFragment = new ProfileFragment();
-//        settingsFragment = new SettingsFragment();
-//        infoFragment = new InfoFragment();
-//        mapFragment = new MapFragment();
-
         profileFragmentViewModel = ViewModelProviders.of(this).get(ProfileFragmentViewModel.class);
 
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -142,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     currentFragment = 6;
                 }
                 else {
+//                    homeFragment = new HomeFragment();
                     fragmentTransaction.replace(R.id.frgmCont, homeFragment);
                 }
                 actionbarTitle.setText(getResources().getString(R.string.app_name));

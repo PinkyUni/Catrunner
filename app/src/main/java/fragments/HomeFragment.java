@@ -48,9 +48,4 @@ public class HomeFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private void init()
-    {
-
-    }
-
 }

@@ -41,27 +41,28 @@ public class MainViewModel extends ViewModel {
         int curFragment = 3;
         switch (view.getId()) {
             case R.id.btn_profile:
-                curFragment = 1;
+                    curFragment = 1;
                 break;
             case R.id.btn_history:
-                curFragment = 2;
+                    curFragment = 2;
                 break;
             case R.id.btn_home:
-                curFragment = 3;
+                    curFragment = 3;
                 break;
             case R.id.btn_settings:
-                curFragment = 4;
+                    curFragment = 4;
                 break;
             case R.id.btn_info:
-                curFragment = 5;
+                    curFragment = 5;
                 break;
 //  это не работает, но надо, чтобы работало :]
             case R.id.actionbar_back:
-                curFragment = 3;
+                    curFragment = 3;
                 break;
 //
         }
-        mCurrentFragment.setValue(curFragment);
+        if (curFragment != getCurrentFragment().getValue())
+            mCurrentFragment.setValue(curFragment);
     }
 
     public MutableLiveData<Integer> getCurrentFragment() {
